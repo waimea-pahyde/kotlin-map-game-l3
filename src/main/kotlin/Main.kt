@@ -72,58 +72,58 @@ class App {
             50,
             10,
             jerrysLens,
-            ImageIcon(ClassLoader.getSystemResource("images/jerrysLens.PNG")).scaled(200, 200),
+            ImageIcon(ClassLoader.getSystemResource("images/jerryslens.png")).scaled(200, 200),
         )
 
         val duckCat = Enemy(
             "David the Duck Cat",
             1000,
             1000,
-            ImageIcon(ClassLoader.getSystemResource("images/duckLake.png")),
-            ImageIcon(ClassLoader.getSystemResource("images/duckCat.png")),
+            ImageIcon(ClassLoader.getSystemResource("images/ducklake.png")),
+            ImageIcon(ClassLoader.getSystemResource("images/duckcat.png")),
             true,
             100,
             10,
             duckCatsBeak,
-            ImageIcon(ClassLoader.getSystemResource("images/duckCatsBeak.PNG")).scaled(200, 200),
+            ImageIcon(ClassLoader.getSystemResource("images/duckcatsbeak.png")).scaled(200, 200),
         )
 
         val womanMan = Enemy(
             "Woman-Man the Eggplant Fan",
             1500,
             1500,
-            ImageIcon(ClassLoader.getSystemResource("images/eggplantFields.PNG")).scaled(1194, 834),
-            ImageIcon(ClassLoader.getSystemResource("images/womanMan.PNG")).scaled(200, 400),
+            ImageIcon(ClassLoader.getSystemResource("images/eggplantfields.png")).scaled(1194, 834),
+            ImageIcon(ClassLoader.getSystemResource("images/womanman.png")).scaled(200, 400),
             true,
             200,
             20,
             womanMansSlice,
-            ImageIcon(ClassLoader.getSystemResource("images/slice.PNG")).scaled(200, 200)
+            ImageIcon(ClassLoader.getSystemResource("images/slice.png")).scaled(200, 200)
         )
         val womanMen = Enemy(
             "Women-Men the Eggplant Friends",
             5000,
             5000,
-            ImageIcon(ClassLoader.getSystemResource("images/eggplantFields.PNG")).scaled(1194, 834),
-            ImageIcon(ClassLoader.getSystemResource("images/WomenMen.PNG")).scaled(500, 350),
+            ImageIcon(ClassLoader.getSystemResource("images/eggplantfields.png")).scaled(1194, 834),
+            ImageIcon(ClassLoader.getSystemResource("images/womenmen.png")).scaled(500, 350),
             true,
             300,
             30,
             swordOfFriendship,
-            ImageIcon(ClassLoader.getSystemResource("images/swordOfFriendship.PNG")).scaled(100, 200),
+            ImageIcon(ClassLoader.getSystemResource("images/swordoffriendship.png")).scaled(100, 200),
         )
 
         val jerry = Enemy(
             "Jerry",
             10000,
             10000,
-            ImageIcon(ClassLoader.getSystemResource("images/theCreepyForest.PNG")).scaled(1194, 834),
-            ImageIcon(ClassLoader.getSystemResource("images/AubaJerry.PNG")).scaled(800, 600),
+            ImageIcon(ClassLoader.getSystemResource("images/thecreepyforest.png")).scaled(1194, 834),
+            ImageIcon(ClassLoader.getSystemResource("images/aubajerry.png")).scaled(800, 600),
             true,
             500,
             50,
             theFinalEggplant,
-            ImageIcon(ClassLoader.getSystemResource("images/theFinalEggplant.PNG")).scaled(200, 200),
+            ImageIcon(ClassLoader.getSystemResource("images/thefinaleggplant.png")).scaled(200, 200),
         )
 
 
@@ -267,11 +267,11 @@ class MainWindow(private val app: App) {
     // ==== Full screens ====
     private val titleLabel = JLabel(app.currentLocation.name)
     private val actualTitleScreen =
-        JLabel(ImageIcon(ClassLoader.getSystemClassLoader().getResource("images/titleScreen.PNG")).scaled(1194, 834))
+        JLabel(ImageIcon(ClassLoader.getSystemClassLoader().getResource("images/titlescreen.png")).scaled(1194, 834))
     private val deathScreen =
-        JLabel(ImageIcon(ClassLoader.getSystemClassLoader().getResource("images/deathScreen.PNG")).scaled(1194, 834))
+        JLabel(ImageIcon(ClassLoader.getSystemClassLoader().getResource("images/deathscreen.png")).scaled(1194, 834))
     private val winScreen =
-        JLabel(ImageIcon(ClassLoader.getSystemClassLoader().getResource("images/winScreen.PNG")).scaled(1194, 834))
+        JLabel(ImageIcon(ClassLoader.getSystemClassLoader().getResource("images/winscreen.png")).scaled(1194, 834))
 
     private var titleScreens = mutableListOf<JLabel>()
 
@@ -282,7 +282,7 @@ class MainWindow(private val app: App) {
     private val enemyName = JLabel(app.currentLocation.listOfEnemies[0].enemyName)
 
     private val enemyHealthBar =
-        JLabel(ImageIcon(ClassLoader.getSystemResource("images/enemyHealth.png")).scaled(600, 400))
+        JLabel(ImageIcon(ClassLoader.getSystemResource("images/enemyhealth.png")).scaled(600, 400))
     private val enemyHealth =
         JLabel("${app.currentLocation.listOfEnemies[0].enemyCurrentHP}/${app.currentLocation.listOfEnemies[0].enemyMaxHP}")
 
@@ -291,21 +291,21 @@ class MainWindow(private val app: App) {
     private val droppedWeapon = JButton(app.currentLocation.listOfEnemies[0].weaponImage)
 
     //    ==== UI Elements ====
-    private val leftArrow = ImageIcon(ClassLoader.getSystemResource("images/arrowPointingRight.png"))
+    private val leftArrow = ImageIcon(ClassLoader.getSystemResource("images/arrowpointingright.png"))
     private val goRightButton = JButton(ImageIcon(ClassLoader.getSystemResource("images/arrow.png")).scaled(90, 90))
     private val goLeftButton = JButton(leftArrow.scaled(90, 90))
 
     private val playerHealth = JLabel("${app.currentPlayer.currentHealth}/${app.currentPlayer.health}")
     private val playerHealthBar =
-        JLabel(ImageIcon(ClassLoader.getSystemResource("images/playerHealth.png")).scaled(300, 500))
+        JLabel(ImageIcon(ClassLoader.getSystemResource("images/playerhealth.png")).scaled(300, 500))
 
-    private val titleBarImage = ImageIcon(ClassLoader.getSystemResource("images/titleBar.png"))
+    private val titleBarImage = ImageIcon(ClassLoader.getSystemResource("images/titlebar.png"))
     private val titleBackground = JLabel(titleBarImage)
 
     private val outOfRangeError = JLabel("You can't go that way!")
 
     private val startButton =
-        JButton(ImageIcon(ClassLoader.getSystemResource("images/startButton.png")).scaled(600, 500))
+        JButton(ImageIcon(ClassLoader.getSystemResource("images/startbutton.png")).scaled(600, 500))
 
     private val playerScoreLabel = JLabel("Player Score")
 
@@ -318,15 +318,15 @@ class MainWindow(private val app: App) {
     //    ==== DIALOGUE BOXES ====
     private val placeDialogue = JLabel("This is a place")
     private val placeDialogueBackground =
-        JLabel(ImageIcon(ClassLoader.getSystemResource("images/transparentDialogue.png")).scaled(600, 300))
+        JLabel(ImageIcon(ClassLoader.getSystemResource("images/transparentdialogue.png")).scaled(600, 300))
 
     private val damageDialogueMessage =
         JLabel("You did ${app.currentLocation.listOfEnemies[0].damageTaken} damage to ${app.currentLocation.listOfEnemies[0].enemyName}")
     private val damageDialogueBox =
-        JLabel(ImageIcon(ClassLoader.getSystemResource("images/damageDialogue.png")).scaled(600, 250))
+        JLabel(ImageIcon(ClassLoader.getSystemResource("images/damagedialogue.png")).scaled(600, 250))
 
     private var enemyDialogueBackground =
-        JLabel(ImageIcon(ClassLoader.getSystemResource("images/transparentDialogue.png")).scaled(600, 300))
+        JLabel(ImageIcon(ClassLoader.getSystemResource("images/transparentdialogue.png")).scaled(600, 300))
     private var enemyDialogue =
         JButton("${app.currentLocation.listOfEnemies[0].enemyName}:\"${app.currentLocation.listOfEnemies[0].listOfDialogues[0]}\"")
 
